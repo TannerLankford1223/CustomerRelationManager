@@ -17,7 +17,7 @@ import java.util.List;
 public class Customer {
 
     @Id
-    private long customerId;
+    private int customerId;
 
     private String firstName;
 
