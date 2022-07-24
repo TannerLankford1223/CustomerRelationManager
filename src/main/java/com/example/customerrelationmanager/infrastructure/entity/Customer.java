@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Document
@@ -26,5 +27,5 @@ public class Customer {
 
     private String phone;
 
-    private List<Note> notes;
+    private List<Note> notes = new ArrayList<>();
 }
