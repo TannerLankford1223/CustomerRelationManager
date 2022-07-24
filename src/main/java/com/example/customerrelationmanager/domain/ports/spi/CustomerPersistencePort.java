@@ -3,6 +3,7 @@ package com.example.customerrelationmanager.domain.ports.spi;
 import com.example.customerrelationmanager.infrastructure.entity.Customer;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface CustomerPersistencePort {
 
@@ -10,7 +11,7 @@ public interface CustomerPersistencePort {
 
     void saveCustomer(Customer customer);
 
-    Customer getCustomer(int id);
+    Optional<Customer> getCustomer(int id);
 
     void deleteCustomer(int id);
 
