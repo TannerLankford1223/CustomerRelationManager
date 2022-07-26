@@ -3,14 +3,30 @@
     min-height: 100px;
     max-height: 300px;
     overflow-y: scroll;
+    white-space: pre-wrap;
 }
 
 .note-message {
     display: flex;
     margin: 0 auto;
-    word-break: break-all
+    word-break: break-all;
 }
 
 .note-input {
     height: 200px;
+}
+
+.search {
+    margin-bottom: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.search-btn {
+    display: inline-block;
+}
+.search-bar {
+    display: inline-block;
+    margin: 0 0 15px 5px;
 }
