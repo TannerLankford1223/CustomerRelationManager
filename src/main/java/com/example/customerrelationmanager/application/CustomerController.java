@@ -51,4 +51,9 @@ public class CustomerController {
         return null;
     }
 
+    @GetMapping("/showFormForNotes")
+    public String showFormForNotes(@RequestParam("customerId") int id, Model model) {
+        return null;
+    }
+
 }
