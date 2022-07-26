@@ -5,8 +5,11 @@ import com.example.customerrelationmanager.infrastructure.entity.Customer;
 import com.example.customerrelationmanager.infrastructure.persistence.CustomerRepository;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Component
 public class CustomerJpaAdapter implements CustomerPersistencePort {
@@ -39,6 +42,11 @@ public class CustomerJpaAdapter implements CustomerPersistencePort {
 
     @Override
     public List<Customer> searchCustomers(String search) {
-        return customerRepo.findAllByFirstNameOrderByLastName(search);
+        List<Customer> firstNameResults = customerRepo.findAllByFirstName(search);
+        List<Customer> lastNameResults = customerRepo.findAllByLastName(search);
+
+        return Stream.of(firstNameResults, lastNameResults)
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 }
