@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  app:
+    image: 'crm:latest'
+    container_name: crm
+    ports:
+      - "8080:8080"
+    depends_on:
+      - customerDB
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://customerDB:5432/customer
+      - SPRING_DATASOURCE_USERNAME=admin
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+  customerDB:
+    image: 'postgres:14-alpine'
+    container_name: customerDB
+    environment:
+      - POSTGRES_DB=customer
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=root
