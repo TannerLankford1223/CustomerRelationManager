@@ -1,0 +1,16 @@
+.notes {
+    background-color: ghostwhite;
+    min-height: 100px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.note-message {
+    display: flex;
+    margin: 0 auto;
+    word-break: break-all
+}
+
+.note-input {
+    height: 200px;
+}
