@@ -33,4 +33,5 @@ public class CustomerDTO {
     @NotNull
     private String phone;
 
+    private String notes;
 }
