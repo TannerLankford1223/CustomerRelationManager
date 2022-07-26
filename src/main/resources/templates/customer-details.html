@@ -18,7 +18,7 @@
     <h3>Customer Details</h3>
     <hr>
 
-    <h5><b>Name:</b> <a th:text="${customer.firstName} ${customer.lastName}"/></h5>
+    <h5><b>Name:</b> <a th:text="${customer.firstName + ' ' + customer.lastName}"/></h5>
     <br>
     <h5><b>Email:</b> <a th:text="${customer.email}"/></h5>
     <br>
