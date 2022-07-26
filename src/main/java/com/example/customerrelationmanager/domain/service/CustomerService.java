@@ -1,7 +1,6 @@
 package com.example.customerrelationmanager.domain.service;
 
 import com.example.customerrelationmanager.domain.dto.CustomerDTO;
-import com.example.customerrelationmanager.domain.dto.Note;
 import com.example.customerrelationmanager.domain.ports.api.CustomerServicePort;
 import com.example.customerrelationmanager.domain.ports.spi.CustomerPersistencePort;
 import org.springframework.stereotype.Service;
@@ -40,20 +39,5 @@ public class CustomerService implements CustomerServicePort {
     @Override
     public List<CustomerDTO> searchCustomers(String searchName) {
         return null;
-    }
-
-    @Override
-    public void addNote(Note note) {
-
-    }
-
-    @Override
-    public void updateNote(Note note) {
-
-    }
-
-    @Override
-    public void deleteNote(Note note) {
-
     }
 }

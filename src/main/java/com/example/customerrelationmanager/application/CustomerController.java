@@ -31,6 +31,11 @@ public class CustomerController {
         return null;
     }
 
+    @GetMapping("/details")
+    public String showFormForDetails(Model model) {
+        return null;
+    }
+
     @GetMapping("/showFormForUpdate")
     public String showFormForUpdate(@RequestParam("customerId") int id, Model model) {
         return null;
